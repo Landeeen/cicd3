@@ -1,11 +1,11 @@
 {
-  "family": "samucicd",
+  "family": "samutask",
   "executionRoleArn": "arn:aws:iam::577258697582:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
   "containerDefinitions": [
     {
-      "name": "samucicd",
-      "image": "577258697582.dkr.ecr.eu-central-1.amazonaws.com/samucicd",
+      "name": "samutask",
+      "image": "577258697582.dkr.ecr.eu-central-1.amazonaws.com/samucicd:latest",
       "portMappings": [
         { "containerPort": 3000, "hostPort": 3000, "protocol": "tcp" }
       ],
