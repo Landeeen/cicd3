@@ -1,18 +1,80 @@
 {
-  "family": "samucicd",
-  "executionRoleArn": "arn:aws:iam::577258697582:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
   "containerDefinitions": [
     {
       "name": "samucicd",
       "image": "577258697582.dkr.ecr.eu-central-1.amazonaws.com/samucicd",
+      "cpu": 0,
+      "links": [],
       "portMappings": [
-        { "containerPort": 3000, "hostPort": 3000, "protocol": "tcp" }
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
       ],
-      "essential": true
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "secrets": [],
+      "dnsServers": [],
+      "dnsSearchDomains": [],
+      "extraHosts": [],
+      "dockerSecurityOptions": [],
+      "dockerLabels": {},
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/samuservice",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
     }
   ],
+  "family": "samucicd",
+  "executionRoleArn": "arn:aws:iam::577258697582:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": ["EC2", "FARGATE"],
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
   "requiresCompatibilities": ["FARGATE"],
-  "cpu": "512",
-  "memory": "1024"
+  "cpu": "1024",
+  "memory": "3072"
 }
