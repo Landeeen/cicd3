@@ -7,7 +7,7 @@
       "name": "samutask",
       "image": "577258697582.dkr.ecr.eu-central-1.amazonaws.com/samucicd",
       "portMappings": [
-        { "containerPort": 3000, "hostPort": 3000, "protocol": "tcp" }
+        { "containerPort": 80, "hostPort": 80, "protocol": "tcp" }
       ],
       "essential": true
     }
