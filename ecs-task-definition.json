@@ -9,16 +9,7 @@
       "portMappings": [
         { "containerPort": 3000, "hostPort": 3000, "protocol": "tcp" }
       ],
-      "essential": true,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-create-group": "true",
-          "awslogs-group": "/ecs/samuservice",
-          "awslogs-region": "eu-central-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      }
+      "essential": true
     }
   ],
   "requiresCompatibilities": ["FARGATE"],
